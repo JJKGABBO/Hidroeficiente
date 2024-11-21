@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--  manejo y configuración del caché del equipo para esta página -->
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+
+    <!-- "viewport"  permite tomar y configura la pantalla --> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Mecatrónica</title>
+
+    <!--  Definiciones ícono favorito --- favicon.ico --->
+    <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="./imagenes/icon/favicon.ico" type="image/x-icon"> 
+
+    <link rel="apple-touch-icon" sizes="120x120" href="./imagenes/icon/apple-touch-icon.png">
+    <link rel="manifest" href="./imagenes/icon/site.webmanifest">
+    <link rel="mask-icon" href="./imagenes/icon/safari-pinned-tab.svg" color="#5bbad5">
+
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="./css/styles.css?n=0">
+    <script src="./js/script.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <img src="imagenes/logo_udec_3.png" >    
+        <h1>Mi PROYECTO</h1>
+        <h2>Ingeniería Mecatrónica</h2> 
+        <br><hr><br>
+    </header>
+
+    <nav> 
+        <ul> 
+           <li><a href="index.html">Inicio</a></li> 
+           <li><a href="Glosario.html">Glosario</a></li> 
+
+        </ul>  
+     </nav> 
+
+     <br><hr><br>
+     <p class="DefProyecto">Un sistema de riego automático para cultivos es un conjunto de dispositivos y tecnologías 
+        diseñados para controlar de manera autónoma el suministro de agua a las plantas, basándose 
+        en datos en tiempo real o programaciones preestablecidas. Su principal función es gestionar 
+        el flujo de agua a los cultivos sin intervención manual continua, ajustando el riego de acuerdo 
+        con condiciones específicas del entorno, como la humedad del suelo o la temperatura.</p>
+     <img id="imagen_articulo1" src="imagenes/fachada_sede_udec.png">
+     <br><hr><br>
+
+    <!-- Tabla de Contenidos -->
+    <DIV id="tabla-contenidos">
+        <h2>Contenido</h2>
+        <ul>
+            <li><a href="#objetivos">OBJETIVOS</a></li>
+            <li><a href="#justificacion">1. JUSTIFICACION</a>
+            <ul>
+                <li><a href="#situacion-problematica">1.1. Situación Problémica</a></li>
+                <li><a href="#justificacion-proyecto">1.2. Justificación del proyecto</a>
+                <ul>
+                    <li><a href="#Encuesta">1.2.1.	Encuesta</a></li>
+                    <li><a href="#Diagrama-Espina-de-Pescado">1.2.2. Diagrama Espina de Pescado</a></li>
+                </ul></li>
+            </ul></li>
+            <li><a href="#marco-teorico">2.	MARCO TEORICO CONCEPTUAL</a>
+            <ul>
+                <li><a href="#teoria-de-proyectos">2.1.Conceptos y terminología asociada con el proyecto</a></li>
+                <li><a href="#normativa-actual">2.2. Normativa aplicable al proyecto</a></li>
+            </ul></li>
+            <li><a href="#Disciplinas">3. DISCIPLINAS QUE INTERVIENEN EN EL PROYECTO</a></li>
+      
+            <li><a href="#propuesta">4. PROPUESTA</a></li>
+            <li><a href="#Referencias-Bibliográficas">5. Referencias Bibliográficas</a>
+
+        </ul>
+    </DIV>
+
+    <!-- Contenido Principal -->
+    <main>
+        <section id="objetivos">
+            <h2 class="Titulo1">Objetivos</h2>
+            <!-- ---------------------------------------------->
+            <p class="Parrafo1">Desarrollar un sistema de riego automático que optimice el uso del agua en cultivos mediante 
+                la implementación de tecnologías de sensores y control automatizado, contribuyendo a la 
+                eficiencia en el manejo de recursos hídricos y la mejora de la productividad agrícola.</p>
+            <ul class="Parrafo1">
+                <li>Diseñar una arquitectura de control automatizado basada en microcontroladores que integre 
+                    sensores de humedad del suelo, temperatura ambiente y lluvia para la toma de decisiones 
+                    precisa en el riego de cultivos.</li>
+                <li>Implementar un sistema de monitoreo en tiempo real de las condiciones ambientales y del 
+                    suelo que permita la recolección y procesamiento de datos para la optimización del riego. </li>
+                <li>Desarrollar un mecanismo de control automatizado para la regulación del flujo de agua 
+                    mediante electroválvulas, que responda a los parámetros establecidos por los sensores y las 
+                    necesidades específicas del cultivo. </li>
+                <li>Establecer protocolos de programación que permitan la adaptación del sistema a diferentes 
+                    tipos de cultivos y condiciones ambientales, considerando variables como la humedad óptima 
+                    y los ciclos de riego. </li>
+                <li>Integrar tecnologías IoT para el monitoreo y control remoto del sistema, facilitando la 
+                    supervisión y ajuste de parámetros de riego desde dispositivos móviles o computadoras.</li>
+                <li>Validar la eficiencia del sistema mediante la medición del consumo de agua y la comparación 
+                    con métodos tradicionales de riego, estableciendo indicadores de ahorro y optimización de 
+                    recursos.</li>
+                <li>Diseñar una interfaz de usuario intuitiva que permita la configuración y monitoreo del 
+                    sistema, facilitando su operación por parte de los agricultores sin necesidad de conocimientos 
+                    técnicos especializados.</li>
+                <li>Implementar medidas de seguridad y respaldo que garanticen el funcionamiento continuo del 
+                    sistema y la protección de los cultivos en caso de fallos técnicos o condiciones ambientales 
+                        adversas.</li>
+            </ul>
+            <button onclick="scrollToTop()">Volver a la Tabla de Contenidos</button>
+        </section>
+
+        <section id="justificacion">
+            <h2 class="Titulo1">1. Justificación</h2>
+            <!-- ---------------------------------------------->
+
+            <article id="situacion-problematica" class="SubCapituloTema">
+                <h3 class="Subtitulo1">1.1. Situacion problematica</h3>
+                <!-- ---------------------------------------------->
+
+                <p class="Parrafo1">Una problemática que el proyecto de un sistema de riego automático para cultivos puede 
+                    solucionar es la ineficiencia en el uso del agua en la agricultura, especialmente en regiones 
+                    donde este recurso es limitado o su disponibilidad es variable. En muchos sistemas de riego 
+                    tradicionales, el agua se aplica de manera manual o mediante métodos poco precisos, lo que 
+                    puede resultar en desperdicio de agua, sobre-riego (que puede causar encharcamiento y 
+                    erosión del suelo) o sub-riego (que puede estresar a las plantas, reduciendo su productividad).</p>
+                <img src="imagenes/imagen 1.png" alt="Imagen 1">
+                <p class="Parrafo1">Esta situación genera varios problemas, como:</p>
+                <ul class="Parrafo1">
+                    <li>Agotamiento de fuentes hídricas debido al uso excesivo e indiscriminado de agua.</li>
+                    <li>Costos elevados por el mal uso de agua y energía.</li>
+                    <li>Impacto negativo en los cultivos debido a un riego inadecuado, lo que afecta la 
+                        calidad y cantidad de la producción agrícola.</li>
+                </ul>
+            </article>
+
+            <article id="justificacion-proyecto" class="SubCapituloTema">
+                <h3 class="Subtitulo1">1.2. Justificación del proyecto</h3>
+                <!-- ---------------------------------------------->
+                <h4 class="Subtitulo2">Justificación técnica</h4>
+                <p class="Parrafo1">La implementación de un sistema de riego automático representa una evolución necesaria en 
+                    las prácticas agrícolas actuales, fundamentada en varios aspectos técnicos relevantes:</p>
+                <ul>
+                    <li>
+                        <strong>Optimización de recursos hídricos</strong>
+                    </li>
+                    <ul class="Parrafo1">
+                        <li>Los métodos tradicionales de riego presentan ineficiencias significativas en el uso del agua, 
+                            con pérdidas considerables por evaporación y distribución irregular</li>
+                        <li>La automatización mediante sensores y controladores permite una dosificación precisa del 
+                            agua, ajustándose a las necesidades reales de los cultivos </li>
+                        <li>Los sistemas de monitoreo en tiempo real posibilitan la detección temprana de problemas y 
+                            la toma de decisiones inmediata</li>
+                    </ul>
+                    <li>
+                        <strong>Avances Tecnológicos Disponibles  </strong>
+                    </li>
+                    <ul class="Parrafo1">
+                        <li>La madurez actual de tecnologías como sensores de humedad, microcontroladores y 
+                            electroválvulas hace viable la implementación de sistemas automatizados </li>
+                        <li>La integración con IoT permite un control y monitoreo remoto, facilitando la gestión de 
+                            cultivos en áreas extensas </li>
+                        <li>Las tecnologías de comunicación inalámbrica posibilitan la creación de redes de sensores 
+                            eficientes y escalables</li>
+                    </ul>
+                </ul>
+
+                <h4 class="Subtitulo2">Justificación económica</h4>
+                <p class="Parrafo1">
+                    La inversión en un sistema de riego automático se justifica desde el punto de vista económico por:
+                </p>
+                <ul class="Parrafo1">
+                    <li><strong>Reducción de Costos Operativos</strong></li>
+                    <ul>
+                        <li>Disminución significativa en el consumo de agua y energía</li>
+                        <li>Reducción de la mano de obra necesaria para las tareas de riego</li>
+                        <li>Minimización de pérdidas por sobre-riego o riego insuficiente</li>
+                    </ul>
+                    <li><strong>Mejora en la Productividad</strong></li>
+                    <ul>
+                        <li>Optimización de las condiciones de crecimiento de los cultivos</li>
+                        <li>Reducción de pérdidas por estrés hídrico</li>
+                        <li>Mayor uniformidad en el desarrollo de las plantas</li>
+                    </ul>
+                    <li><strong>Retorno de Inversión</strong></li>
+                    <ul>
+                        <li>El ahorro en recursos hídricos y mano de obra permite recuperar la inversión inicial</li>
+                        <li>Incremento en la calidad y cantidad de la producción agrícola</li>
+                        <li>Reducción de costos de mantenimiento a largo plazo</li>
+                    </ul>
+                </ul>
+
+                <h4 class="Subtitulo2">Justificación ambiental</h4>
+                <p class="Parrafo1">El proyecto se alinea con los principios de sostenibilidad ambiental por:</p>
+                <ul class="Parrafo1">
+                    <li><strong>Conservación de Recursos Naturales</strong></li>
+                    <ul>
+                        <li>Uso eficiente del agua, un recurso cada vez más escaso</li>
+                        <li>Reducción de la huella hídrica en la agricultura</li>
+                        <li>Prevención de la erosión del suelo por sobre-riego</li>
+                    </ul>
+                    <li><strong>Adaptación al Cambio Climático</strong></li>
+                    <ul>
+                        <li>Mayor resiliencia ante condiciones climáticas variables</li>
+                        <li>Adaptabilidad a patrones de lluvia irregulares</li>
+                        <li>Contribución a la agricultura sostenible</li>
+                    </ul>
+                    <li><strong>Cumplimiento Normativo</strong></li>
+                    <ul>
+                        <li>Alineación con la Ley 99 de 1993 de Desarrollo Sostenible</li>
+                        <li>Conformidad con regulaciones ambientales vigentes</li>
+                        <li>Apoyo a las políticas de conservación de recursos hídricos</li>
+                    </ul>
+                </ul>
+
+                <h4 class="Subtitulo2">Justificación social</h4>
+                <p class="Parrafo1">El impacto social del proyecto se refleja en:</p>
+                <ul class="Parrafo1">
+                    <li>
+                        <strong>Mejora en las Condiciones de Trabajo</strong>
+                    </li>
+                    <ul class="Parrafo1">
+                        <li>Reducción del esfuerzo físico en tareas de riego</li>
+                        <li>Disminución de la exposición a condiciones climáticas adversas</li>
+                        <li>Optimización del tiempo del agricultor</li>
+                    </ul>
+                    <li>
+                        <strong>Desarrollo de Capacidades</strong>
+                    </li>
+                    <ul class="Parrafo1">
+                        <li>Fomento de la adopción de nuevas tecnologías en el sector agrícola</li>
+                        <li>Capacitación en el uso de sistemas automatizados</li>
+                        <li>Modernización de las prácticas agrícolas tradicionales</li>
+                    </ul>
+                    <li>
+                        <strong>Beneficios para la Comunidad</strong>
+                    </li>
+                    <ul class="Parrafo1">
+                        <li>Contribución a la seguridad alimentaria</li>
+                        <li>Uso más responsable de recursos comunitarios</li>
+                        <li>Ejemplo de implementación de tecnologías sostenibles</li>
+                    </ul>
+                </ul>
+            </article>
+
+            <article id="Encuesta" class="SubCapituloTema">
+                <h3 class="Subtitulo1">Encuesta Implementación de Sistema de Riego Automático</h3>
+                <form>
+                    <label for="cultivo">1. ¿Qué tipo de cultivo maneja principalmente?</label><br>
+                    <input type="checkbox" id="hortalizas" name="cultivo" value="Hortalizas"> Hortalizas<br>
+                    <input type="checkbox" id="frutales" name="cultivo" value="Frutales"> Frutales<br>
+                    <input type="checkbox" id="cereales" name="cultivo" value="Cereales"> Cereales<br>
+                    <input type="checkbox" id="flores" name="cultivo" value="Flores"> Flores<br>
+                    <input type="checkbox" id="otro" name="cultivo" value="Otro"> Otro (especifique): <input type="text" name="otroCultivo"><br><br>
+
+                    <label for="area">2. ¿Cuál es el tamaño aproximado de su área de cultivo?</label><br>
+                    <input type="radio" id="menos1" name="area" value="Menos de 1 hectárea"> Menos de 1 hectárea<br>
+                    <input type="radio" id="1-5" name="area" value="1-5 hectáreas"> 1-5 hectáreas<br>
+                    <input type="radio" id="5-20" name="area" value="5-20 hectáreas"> 5-20 hectáreas<br>
+                    <input type="radio" id="mas20" name="area" value="Más de 20 hectáreas"> Más de 20 hectáreas<br><br>
+
+                    <label for="metodo">3. ¿Qué método de riego utiliza actualmente?</label><br>
+                    <input type="radio" id="manual" name="metodo" value="Riego manual"> Riego manual<br>
+                    <input type="radio" id="aspersión" name="metodo" value="Riego por aspersión"> Riego por aspersión<br>
+                    <input type="radio" id="goteo" name="metodo" value="Riego por goteo"> Riego por goteo<br>
+                    <input type="radio" id="automatizado" name="metodo" value="Sistema de riego automatizado"> Sistema de riego automatizado<br>
+                    <input type="radio" id="otroMetodo" name="metodo" value="Otro"> Otro (especifique): <input type="text" name="otroMetodoEspecifico"><br><br>
+
+                    <label for="interes">4. En una escala del 1 al 5, donde 1 es "Nada interesado" y 5 es "Muy interesado", ¿qué tan interesado estaría en implementar un sistema de riego automático en su cultivo?</label><br>
+                    <input type="radio" id="1" name="interes" value="1"> 1<br>
+                    <input type="radio" id="2" name="interes" value="2"> 2<br>
+                    <input type="radio" id="3" name="interes" value="3"> 3<br>
+                    <input type="radio" id="4" name="interes" value="4"> 4<br>
+                    <input type="radio" id="5" name="interes" value="5"> 5<br><br>
+
+                    <label for="beneficios">5. ¿Cuál de los siguientes beneficios de un sistema de riego automático le resulta más atractivo? (Seleccione hasta dos opciones)</label><br>
+                    <input type="checkbox" id="ahorroAgua" name="beneficios" value="Ahorro de agua"> Ahorro de agua<br>
+                    <input type="checkbox" id="reduccionManoObra" name="beneficios" value="Reducción de mano de obra"> Reducción de mano de obra<br>
+                    <input type="checkbox" id="mejoraProductividad" name="beneficios" value="Mejora en la productividad del cultivo"> Mejora en la productividad del cultivo<br>
+                    <input type="checkbox" id="controlPreciso" name="beneficios" value="Control preciso de la irrigación"> Control preciso de la irrigación<br>
+                    <input type="checkbox" id="monitoreoRemoto" name="beneficios" value="Monitoreo remoto del sistema"> Monitoreo remoto del sistema<br><br>
+
+                    <label for="preocupacion">6. ¿Cuál es su principal preocupación al considerar la implementación de un sistema de riego automático? (Seleccione una opción)</label><br>
+                    <input type="radio" id="costo" name="preocupacion" value="Costo inicial de instalación"> Costo inicial de instalación<br>
+                    <input type="radio" id="complejidad" name="preocupacion" value="Complejidad técnica del sistema"> Complejidad técnica del sistema<br>
+                    <input type="radio" id="mantenimiento" name="preocupacion" value="Mantenimiento y reparaciones"> Mantenimiento y reparaciones<br>
+                    <input type="radio" id="confiabilidad" name="preocupacion" value="Confiabilidad del sistema"> Confiabilidad del sistema<br>
+                    <input type="radio" id="otroPreocupacion" name="preocupacion" value="Otro"> Otro (especifique): <input type="text" name="otraPreocupacion"><br><br>
+
+                    <label for="inversion">7. ¿Cuánto estaría dispuesto a invertir en un sistema de riego automático por hectárea?</label><br>
+                    <input type="radio" id="menos5" name="inversion" value="Menos de 5 millones de pesos"> Menos de 5 millones de pesos<br>
+                    <input type="radio" id="5-10" name="inversion" value="Entre 5 y 10 millones de pesos"> Entre 5 y 10 millones de pesos<br>
+                    <input type="radio" id="10-20" name="inversion" value="Entre 10 y 20 millones de pesos"> Entre 10 y 20 millones de pesos<br>
+                    <input type="radio" id="mas20" name="inversion" value="Más de 20 millones de pesos"> Más de 20 millones de pesos<br><br>
+
+                    <label for="caracteristicas">8. ¿Qué características adicionales le gustaría que tuviera un sistema de riego automático? (Pregunta abierta)</label><br>
+                    <textarea id="caracteristicas" name="caracteristicas" rows="4" cols="50"></textarea><br><br>
+
+                    <label for="informacion">9. ¿Estaría interesado en recibir más información sobre sistemas de riego automático?</label><br>
+                    <input type="radio" id="si" name="informacion" value="Sí"> Sí<br>
+                    <input type="radio" id="no" name="informacion" value="No"> No<br><br>
+
+                    <input type="submit" value="Enviar">
+                </form>
+            </article>
+
+            <article id="Conclusiones-encuesta" class="SubCapituloTema">
+                <h3 class="Subtitulo1">1.2.2. Conclusiones de la encuesta</h3>
+                <!-- ---------------------------------------------->
+                <p class="Parrafo1"></p>
+            </article>
+
+            <article id="Diagrama-Espina-de-Pescado" class="SubCapituloTema">
+                <h3 class="Subtitulo1">1.2.3. Diagrama Espina de Pescado</h3>
+                <!-- ---------------------------------------------->
+                <img src="imagenes/Imagen espina de pescado.jpeg" alt="Imagen Espina de pescado">
+           
+            <button onclick="scrollToTop()">Volver a la Tabla de Contenidos</button>
+        </section>
+
+
+
+        <section id="marco-teorico">
+            <h2 class="Titulo1">2.	MARCO TEORICO</h2>
+            <!-- ---------------------------------------------->
+            <article id="teoria-de-proyectos" class="SubCapituloTema">
+                <h3 class="Subtitulo1">2.1.Conceptos y terminología asociada con el proyecto</h3>
+            <!-- ---------------------------------------------->
+            <p class="Parrafo1">El riego es una técnica esencial en la agricultura, cuyo objetivo es proporcionar agua a las 
+                plantas para garantizar su crecimiento y desarrollo. A lo largo de la historia, las prácticas de 
+                riego han avanzado desde métodos simples hasta sistemas modernos más eficientes. Con el 
+                tiempo, la incorporación de la tecnología ha dado lugar a los sistemas de riego automático, 
+                que permiten controlar el suministro de agua de manera precisa y sin intervención manual 
+                constante, lo que ayuda a mejorar la eficiencia en el uso del agua, un recurso cada vez más 
+                escaso. </p>
+            <img src="imagenes/imagen 2.png" alt="Imagen 2">
+            
+            <h4 class="Subtitulo2">1. Concepto de riego automático</h4>
+            <p class="Parrafo1">Un sistema de riego automático es un conjunto de dispositivos tecnológicos que permiten el 
+                suministro de agua de forma autónoma a los cultivos, sin la necesidad de la intervención 
+                directa del agricultor. La principal función de este tipo de sistema es administrar el riego de 
+                manera eficiente, utilizando sensores y controladores que ajustan el flujo de agua de acuerdo 
+                con las necesidades específicas del cultivo y las condiciones del entorno, como la humedad 
+                del suelo. </p>
+                <h4 class="Subtitulo2">2. Fundamentos teóricos</h4>
+                <p class="Parrafo1">El riego automático se basa en dos conceptos principales: la eficiencia en el uso del agua y 
+                la automatización de procesos. Estos conceptos surgen como respuesta a la necesidad de 
+                mejorar la gestión del agua en la agricultura y de reducir el esfuerzo humano, al mismo 
+                tiempo que se minimizan errores en el manejo del riego.</p>
+                <ul class="Parrafo1">
+                    <li><strong>Eficiencia en el uso del agua:</strong>La idea de utilizar el agua de manera eficiente implica 
+                    suministrar la cantidad justa de agua que las plantas necesitan. Un sistema de riego 
+                    automático ayuda a lograr esto al garantizar que el agua solo se aplique cuando el 
+                    suelo lo requiere, evitando el exceso o la falta de riego.</li>
+                <li><strong>automatización: </strong>Los sistemas automatizados funcionan sin intervención humana 
+                    constante, gracias al uso de controladores que toman decisiones basadas en datos 
+                    proporcionados por sensores de humedad y otros dispositivos. Esta automatización 
+                    reduce la carga de trabajo y optimiza la gestión del agua, mejorando la producción 
+                    agrícola. </li>
+                </ul>
+                <h4 class="Subtitulo2">3. Componentes teóricos del sistema de riego automático</h4>
+                <p class="Parrafo1">Un sistema de riego automático combina distintos elementos tecnológicos que interactúan 
+                    entre sí. A continuación, se describen los principales componentes y su relevancia teórica:</p>
+                    <ul class="Parrafo1">
+                        <li><strong>Sensores de humedad del suelo:</strong> Estos dispositivos miden el contenido de agua en el 
+                            suelo. Según la teoría de la capacidad de campo y el punto de marchitez permanente 
+                    (Veihmeyer & Hendrickson, 1927), el suelo tiene límites en su capacidad para retener 
+                    agua útil para las plantas. Los sensores permiten conocer en tiempo real estos niveles, 
+                    optimizando el riego.</li>
+                <li><strong>Controladores programables:</strong> Estos son el "cerebro" del sistema, ya que reciben los 
+                    datos de los sensores y toman decisiones basadas en algoritmos predefinidos. La 
+                    teoría de control automatizado y la lógica de sistemas programables se aplican aquí 
+                    para gestionar el flujo de agua. Según Gambier (2007), los controladores pueden ser 
+                    programados para responder a cambios en las condiciones climáticas o del suelo.</li>
+                    <li><strong>Válvulas y bombas:</strong> Estos componentes mecánicos regulan el flujo de agua desde la 
+                        fuente hacia los cultivos. La hidrodinámica y la mecánica de fluidos explican cómo 
+                    la presión del agua debe ser controlada para asegurar que la distribución sea uniforme 
+                    y eficiente.</li>
+                <li><strong>Aspersores y emisores de riego por goteo:</strong> Según Keller y Bliesner (1990), los 
+                    sistemas de distribución de agua, como los aspersores y el riego por goteo, se 
+                    seleccionan en función de las características del cultivo y las condiciones del suelo. 
+                    Estos dispositivos tienen como objetivo distribuir el agua de manera uniforme y evitar 
+                    pérdidas por evaporación o infiltración profunda.</li>
+            </ul>
+            <h4 class="Subtitulo2">4. Teorías sobre el uso del agua en la agricultura</h4>
+            <p class="Parrafo1">El uso racional del agua en la agricultura ha sido objeto de estudio por diversas teorías, entre 
+            las cuales destacan:</p>
+            <ul class="Parrafo1">
+                <li><strong>Teoría de la Productividad del Agua:</strong> Esta teoría, desarrollada por Molden et al. 
+                    (2010), sugiere que la productividad del agua es un concepto clave para evaluar la 
+                    eficiencia con la que se utiliza este recurso en la producción agrícola. Un sistema de 
+                    riego automático tiene el potencial de incrementar la productividad al asegurar que 
+                    las plantas reciban el agua en el momento y cantidad adecuados.</li>
+                    <li><strong>Teoría del Balance Hídrico del Suelo:</strong> Según esta teoría, el balance hídrico del suelo 
+                        se refiere a la relación entre la entrada de agua (lluvia o riego) y la salida de agua 
+                        (evapotranspiración, percolación). Un sistema de riego automático ayuda a mantener 
+                        este balance de manera equilibrada evitando tanto el déficit como el exceso de agua.</li>
+                    </ul>
+                    <h4 class="Subtitulo2">5. Avances tecnológicos y el internet de las cosas</h4>
+            <p class="Parrafo1">La integración de tecnologías emergentes como el Internet de las Cosas ha revolucionado los 
+                sistemas de riego automático. Con el IoT, los sistemas de riego pueden ser monitorizados y 
+                controlados remotamente mediante el uso de redes de sensores inalámbricos y aplicaciones 
+                móviles .Esto representa una mejora significativa en la gestión de cultivos, especialmente en 
+                áreas remotas o con gran extensión de terreno.</p>
+                <h4 class="Subtitulo2">6. Impacto ambiental y sustentabilidad</h4>
+            <p class="Parrafo1">El riego eficiente no solo es importante para la productividad agrícola, sino también para la 
+                sostenibilidad ambiental. El uso excesivo de agua puede conducir a la degradación del suelo 
+                y al agotamiento de los acuíferos. Por tanto, los sistemas de riego automatizados contribuyen 
+                a una gestión sostenible del agua, minimizando el impacto negativo sobre los ecosistemas 
+                circundantes (Postel, 1999).</p>
+            
+            <img src="imagenes/imagen 3.png" alt="Imagen 3">
+
+            <h3 class="Subtitulo1">Conceptos causa – efecto para el desarrollo de diagrama espina de pescado</h3>
+            <p class="Parrafo1">El análisis de causa-efecto, también conocido como diagrama de espina de pescado o diagrama de Ishikawa, es una herramienta que permite identificar las causas principales de un problema y sus efectos. A continuación, se presentan los conceptos causa-efecto relevantes para el desarrollo del sistema de riego automático:</p>
+            <ul class="Parrafo1">
+                <li><strong>1. Mano de Obra (Personal):</strong>
+                    <ul>
+                        <li>Falta de capacitación técnica</li>
+                        <li>Error humano en la programación</li>
+                        <li>Alta rotación de personal</li>
+                        <li>Fatiga por trabajo manual excesivo</li>
+                    </ul>
+                </li>
+                <li><strong>2. Medio Ambiente:</strong>
+                    <ul>
+                        <li>Variaciones climáticas impredecibles</li>
+                        <li>Diferentes tipos de suelo</li>
+                        <li>Evaporación excesiva</li>
+                        <li>Patrones de lluvia irregulares</li>
+                    </ul>
+                </li>
+                <li><strong>3. Métodos:</strong>
+                    <ul>
+                        <li>Riego en horarios inadecuados</li>
+                        <li>Falta de programación estructurada</li>
+                        <li>Métodos obsoletos de riego</li>
+                        <li>Ausencia de protocolos estandarizados</li>
+                    </ul>
+                </li>
+                <li><strong>4. Máquinas (Equipos):</strong>
+                    <ul>
+                        <li>Equipos desactualizados</li>
+                        <li>Fallas en sistemas de bombeo</li>
+                        <li>Válvulas defectuosas</li>
+                        <li>Falta de mantenimiento preventivo</li>
+                    </ul>
+                </li>
+                <li><strong>5. Materiales:</strong>
+                    <ul>
+                        <li>Tuberías de baja calidad</li>
+                        <li>Sensores inadecuados</li>
+                        <li>Conexiones deficientes</li>
+                        <li>Desgaste prematuro de componentes</li>
+                    </ul>
+                </li>
+                <li><strong>6. Medición:</strong>
+                    <ul>
+                        <li>Falta de monitoreo continuo</li>
+                        <li>Sensores descalibrados</li>
+                        <li>Medición imprecisa de variables</li>
+                        <li>Ausencia de datos históricos</li>
+                    </ul>
+                </li>
+            </ul>
+            <p class="Parrafo1">Efectos principales del problema:</p>
+            <ul class="Parrafo1">
+                <li>Desperdicio de agua</li>
+                <li>Costos operativos elevados</li>
+                <li>Baja productividad en cultivos</li>
+                <li>Daños a las plantas por riego inadecuado</li>
+                <li>Mayor impacto ambiental</li>
+                <li>Pérdidas económicas</li>
+                <li>Uso ineficiente de recursos</li>
+                <li>Tiempo perdido en operaciones manuales</li>
+            </ul>
+            <p class="Parrafo1">Este análisis de causa-efecto ayuda a:</p>
+            <ul class="Parrafo1">
+                <li>Identificar las áreas críticas que necesitan mejora</li>
+                <li>Desarrollar soluciones específicas para cada causa raíz</li>
+                <li>Priorizar las intervenciones según su impacto</li>
+                <li>Diseñar un sistema más eficiente y automatizado</li>
+                <li>Establecer medidas preventivas</li>
+                <li>Mejorar la toma de decisiones en el proyecto</li>
+            </ul>
+
+            <h3 class="Subtitulo1">Posibles componentes del proyecto</h3>
+            <h4 class="Subtitulo2">1. Microcontrolador</h4>
+            <p class="Parrafo1">El microcontrolador es el cerebro del sistema de riego automatizado. Se trata de un circuito integrado programable capaz de ejecutar las instrucciones grabadas en su memoria. Está compuesto por varios bloques funcionales, que son: procesador, memoria y periféricos de entrada/salida.</p>
+            <p class="Parrafo1">En el contexto de un sistema de riego automatizado, el microcontrolador se encarga de:</p>
+            <ul class="Parrafo1">
+                <li>Procesar la información recibida de los diversos sensores.</li>
+                <li>Tomar decisiones basadas en la programación y los datos recibidos.</li>
+                <li>Controlar los actuadores como válvulas y bombas.</li>
+                <li>Manejar la comunicación con interfaces de usuario o sistemas remotos.</li>
+            </ul>
+            <p class="Parrafo1">Ejemplos comunes de microcontroladores utilizados en estos sistemas son Arduino y Raspberry Pi. Arduino es especialmente popular en proyectos de automatización debido a su facilidad de uso y amplia comunidad de soporte. Raspberry Pi, por otro lado, ofrece mayor potencia de procesamiento y la capacidad de ejecutar un sistema operativo completo, lo que puede ser beneficioso para sistemas más complejos o que requieren interfaces de usuario avanzadas.</p>
+
+            <h4 class="Subtitulo2">2. Sensores de humedad del suelo</h4>
+            <p class="Parrafo1">Los sensores de humedad del suelo son dispositivos diseñados para medir el contenido de agua presente en el suelo. Estos sensores son cruciales en un sistema de riego automatizado, ya que proporcionan datos precisos sobre cuándo es necesario regar.</p>
+            <p class="Parrafo1">Existen varios tipos de sensores de humedad del suelo, entre los que se incluyen:</p>
+            <ul class="Parrafo1">
+                <li><strong>Sensores resistivos:</strong> Miden la resistencia eléctrica entre dos electrodos insertados en el suelo. La resistencia disminuye a medida que aumenta la humedad.</li>
+                <li><strong>Sensores capacitivos:</strong> Miden la constante dieléctrica del suelo, que varía con el contenido de agua.</li>
+                <li><strong>Sensores de neutrones:</strong> Utilizan una fuente radiactiva para medir la cantidad de neutrones lentos en el suelo, que está relacionada con el contenido de agua.</li>
+            </ul>
+            <p class="Parrafo1">En sistemas de riego automatizado, los sensores resistivos y capacitivos son los más comunes debido a su bajo costo y facilidad de integración con microcontroladores.</p>
+
+            <h4 class="Subtitulo2">3. Sensores de temperatura ambiente</h4>
+            <p class="Parrafo1">Los sensores de temperatura ambiente son dispositivos que miden la temperatura del aire circundante. En un sistema de riego automatizado, estos sensores desempeñan un papel importante en la optimización del uso del agua y la salud de las plantas.</p>
+            <p class="Parrafo1">La temperatura ambiente afecta directamente a la tasa de evapotranspiración de las plantas, que es la combinación de la evaporación del agua del suelo y la transpiración de las plantas. Al conocer la temperatura ambiente, el sistema puede ajustar los ciclos de riego para compensar las pérdidas de agua más rápidas en días calurosos o reducir el riego en días más frescos.</p>
+            <p class="Parrafo1">Existen varios tipos de sensores de temperatura utilizados en estos sistemas:</p>
+            <ul class="Parrafo1">
+                <li><strong>Termistores:</strong> Resistencias que cambian su valor en función de la temperatura.</li>
+                <li><strong>Termopares:</strong> Generan un voltaje proporcional a la diferencia de temperatura entre dos metales diferentes.</li>
+                <li><strong>Sensores de temperatura integrados:</strong> Circuitos integrados que proporcionan una salida digital o analógica proporcional a la temperatura.</li>
+            </ul>
+            <p class="Parrafo1">En sistemas de riego automatizado, los sensores de temperatura integrados como el DS18B20 son populares debido a su precisión, bajo costo y fácil integración con microcontroladores.</p>
+
+            <h4 class="Subtitulo2">4. Sensores de lluvia</h4>
+            <p class="Parrafo1">Los sensores de lluvia son dispositivos diseñados para detectar la presencia de precipitación. En un sistema de riego automatizado, estos sensores son esenciales para evitar el riego innecesario durante o después de lluvias naturales, lo que ayuda a conservar agua y prevenir el exceso de riego.</p>
+            <p class="Parrafo1">Existen principalmente dos tipos de sensores de lluvia utilizados en sistemas de riego:</p>
+            <ul class="Parrafo1">
+                <li><strong>Sensores de cubeta basculante:</strong> Consisten en un embudo que recoge la lluvia y la dirige hacia una pequeña cubeta. Cuando la cubeta se llena, se inclina, vaciándose y activando un interruptor que envía una señal al controlador.</li>
+                <li><strong>Sensores de conductividad:</strong> Utilizan dos electrodos expuestos. Cuando el agua de lluvia cae sobre estos electrodos, completa un circuito eléctrico, lo que indica la presencia de lluvia.</li>
+            </ul>
+            <p class="Parrafo1">Estos sensores pueden configurarse para detectar diferentes niveles de lluvia, permitiendo que el sistema de riego se ajuste en función de la intensidad de la precipitación.</p>
+
+            <h4 class="Subtitulo2">5. Electroválvulas para control de flujo de agua</h4>
+            <p class="Parrafo1">Las electroválvulas, también conocidas como válvulas solenoides, son dispositivos electromecánicos diseñados para controlar el flujo de líquidos o gases. En un sistema de riego automatizado, las electroválvulas son componentes críticos que permiten el control preciso del flujo de agua hacia diferentes zonas del área de cultivo.</p>
+
+            <h3 class="Subtitulo1">Funcionamiento:</h3>
+            <ul class="Parrafo1"></ul>
+                <li>Cuando se aplica una corriente eléctrica a la bobina de la electroválvula, se genera un campo magnético que mueve un émbolo interno.</li>
+                <li>Este movimiento abre o cierra el paso del agua, dependiendo del diseño de la válvula (normalmente abierta o normalmente cerrada).</li>
+                <li>Al cesar la corriente eléctrica, un resorte devuelve el émbolo a su posición original.</li>
+                <li>En sistemas de riego, se utilizan principalmente dos tipos de electroválvulas:
+                    <ul>
+                        <li>Válvulas de acción directa: Adecuadas para sistemas de baja presión y caudal.</li>
+                        <li>Válvulas servocomandadas: Más eficientes para sistemas de alta presión y gran caudal.</li>
+                    </ul>
+                </li>
+                <li>La selección de la electroválvula adecuada depende de factores como el caudal requerido, la presión del sistema, el voltaje de operación y la compatibilidad con el tipo de agua utilizada (potable, tratada, etc.).</li>
+            </ul>
+
+            <h3 class="Subtitulo1">Criterios a tener en cuenta para el proyecto</h3>
+            <ul class="Parrafo1">
+                <li>Eficiencia en el uso del agua</li>
+                <li>Automatización y reducción de la intervención manual</li>
+                <li>Adaptabilidad a diferentes tipos de cultivos y condiciones del suelo</li>
+                <li>Integración de sensores de humedad del suelo y temperatura ambiente</li>
+                <li>Incorporación de sensores de lluvia para evitar riego innecesario</li>
+                <li>Uso de microcontroladores para el procesamiento de datos y toma de decisiones</li>
+                <li>Implementación de electroválvulas para el control preciso del flujo de agua</li>
+                <li>Compatibilidad con tecnologías IoT para monitoreo y control remoto</li>
+                <li>Sostenibilidad ambiental y reducción del impacto ecológico</li>
+                <li>Relación costo-beneficio para los agricultores</li>
+            </ul>
+                
+            </article>
+
+            <article id="normativa-actual" class="SubCapituloTema">
+                <h3 class="Subtitulo1">2.2. Normativa aplicable al proyecto</h3>
+                <!-- ---------------------------------------------->
+
+                <h4 class="Subtitulo2">Leyes y normativas generales</h4>
+                <ul class="Parrafo1">
+                    <li>Ley 99 de 1993: Ley de Desarrollo Sostenible y Protección del Medio Ambiente.</li>
+                    <li>Ley 1450 de 2011: Plan Nacional de Desarrollo.</li>
+                    <li>Decreto 1076 de 2015: Reglamento de la Ley 1450.</li>
+                </ul>
+
+                <h4 class="Subtitulo2">Normativas específicas para sistemas de riego</h4>
+                <ul class="Parrafo1">
+                    <li>Decreto 1541 de 1978: Reglamento de Riego y Drenaje.</li>
+                    <li>Resolución 1433 de 2004: Reglamento Técnico para Sistemas de Riego.</li>
+                    <li>Resolución 0340 de 2017: Requisitos técnicos para sistemas de riego.</li>
+                </ul>
+
+                <h4 class="Subtitulo2">Estándares y normas técnicas</h4>
+                <ul class="Parrafo1">
+                    <li>NTC 3700: Sistemas de riego. Requisitos generales.</li>
+                    <li>NTC 4500: Sistemas de riego. Componentes y materiales.</li>
+                    <li>ICONTEC 1500: Sistemas de riego. Diseño y construcción.</li>
+                </ul>
+
+                <h4 class="Subtitulo2">Regulaciones de seguridad y salud</h4>
+                <ul class="Parrafo1">
+                    <li>Decreto 1443 de 2014: Reglamento de Seguridad y Salud en el Trabajo.</li>
+                    <li>Resolución 2400 de 2019: Requisitos de seguridad para equipos y sistemas.</li>
+                </ul>
+
+                <h4 class="Subtitulo2">Certificaciones y registros</h4>
+                <ul class="Parrafo1">
+                    <li>Certificado de conformidad con las normas técnicas colombianas (NTC).</li>
+                    <li>Registro en el Instituto Colombiano de Normas Técnicas y Certificación (ICONTEC).</li>
+                    <li>Registro en la Superintendencia de Industria y Comercio (SIC).</li>
+                </ul>
+
+                <h4 class="Subtitulo2">Leyes nacionales colombianas aplicables</h4>
+                <ul class="Parrafo1">
+                    <li>Ley 99 de 1993: Ley de Desarrollo Sostenible y Protección del Medio Ambiente.</li>
+                    <li>Ley 1450 de 2011: Plan Nacional de Desarrollo.</li>
+                    <li>Decreto 1076 de 2015: Reglamento de la Ley 1450.</li>
+                    <li>Decreto 1541 de 1978: Reglamento de Riego y Drenaje.</li>
+                    <li>Resolución 1433 de 2004: Reglamento Técnico para Sistemas de Riego.</li>
+                    <li>Resolución 0340 de 2017: Requisitos técnicos para sistemas de riego.</li>
+                    <li>Decreto 1443 de 2014: Reglamento de Seguridad y Salud en el Trabajo.</li>
+                </ul>
+            </article>
+
+            <button onclick="scrollToTop()">Volver a la Tabla de Contenidos</button>
+
+        </section>
+
+        <section class="Disciplinas">
+            <h2 class="Titulo1">3. DISCIPLINAS QUE INTERVIENEN EN EL PROYECTO</h2>
+            <ul>
+                <li>    
+                    <h2 class="Titulo2">
+                        Ingeniería electrónica
+                    </h2>
+                </li>
+                <li>
+                    <h2 class="Titulo2">
+                        Ingeniería agronomica
+                    </h2>
+                </li>
+                <li>
+                    <h2 class="Titulo2">
+                        Ingeniería de alimentos
+                    </h2>
+                </li>
+            </ul>
+        </section>
+        <section class="Propuesta">
+            <h2 class="Titulo1">4. PROPUESTA</h2>
+            <p class="Parrafo1">
+                El sistema Hidroeficiente es una innovadora solución agrícola diseñada para optimizar el crecimiento de los cultivos. A través de una red de sensores y actuadores, este sistema monitorea en tiempo real las condiciones del suelo y las plantas, ajustando automáticamente la liberación de nutrientes y agua. Al suministrar los recursos de manera precisa y localizada, se maximiza la eficiencia en el uso de fertilizantes y agua, minimizando pérdidas por escorrentía o evaporación. Además, el sistema incorpora tecnologías de control de plagas y enfermedades, promoviendo una agricultura más sostenible y productiva.
+            </p>
+            <img src="imagenes/propuesta.jpg" alt="Imagen Propuesta">
+        </section>
+    </section>
+
+    <aside id="redes">  <!-- definimos el bloque del LADO DERECHO -->
+       <p> Aquí mostramos el menú de redes sociales</p>
+       <p> @eDIMberWEB</p>
+       <p> EdimberWEB</p> 
+       <p> Para mas informacion contactenos al siguielnte numero o correo</p>
+       <li>Contacto:</li> 
+       <li>+57 320 4236281</li>  
+       <li>Edimberweb@outlook.com</li>
+
+        <!-- Aquí terminan los apartados o comentarios"-->
+       
+        <section class="Referencias-Bibliográficas">
+            <h2 class="Titulo1">5. Referencias Bibliográficas</h2>
+            <ul>
+                <li>Allen, R. G., Pereira, L. S., Raes, D., & Smith, M. (1998). Crop evapotranspiration: Guidelines for computing crop water requirements. FAO Irrigation and Drainage Paper 56.</li>
+                <li>Abbasi, A. Z., Islam, N., & Shaikh, Z. A. (2014). A review of wireless sensors and networks' applications in agriculture. Computer Standards & Interfaces, 36(2), 263-270.</li>
+                <li>Aguilar, M., & Martínez, R. (2020). Smart irrigation systems: A comprehensive review of wireless sensor technologies and applications. Sensors and Actuators B: Chemical, 287, 157-169.</li>
+                <li>Ahmed, F., Al-Mamun, M., & Bari, A. S. M. H. (2019). IoT-based automated irrigation system: A technical review. International Journal of Advanced Research in Computer Science, 10(6), 21-28.</li>
+                <li>Barkunan, S. R., Bhanumathi, V., & Sethuram, J. (2019). Smart sensor for automatic drip irrigation system for paddy cultivation. Computers and Electronics in Agriculture, 160, 104-116.</li>
+                <li>Bhatt, J., & Patel, J. (2020). Microcontroller-based smart irrigation system with moisture sensors. International Journal of Engineering Science and Technology, 12(3), 11-17.</li>
+                <li>Castañeda-Miranda, A., & Castaño-Meneses, V. M. (2020). Internet of things in precision agriculture: A systematic review. Sensors, 20(12), 3640.</li>
+                <li>Chen, X., Zhang, L., & Zhou, H. (2021). Advances in automated irrigation systems: Sensing technologies and control strategies. Agricultural Water Management, 243, 106524.</li>
+                <li>Dhillon, R. S., Mishra, V., Sivakumar, B., & Soni, U. (2017). Optimization techniques in smart irrigation: A comprehensive review. Computers and Electronics in Agriculture, 155, 43-57.</li>
+                <li>El-Kader, S. M. A., & El-Basioni, B. M. M. (2018). Precision farming solution in Egypt using the wireless sensor network technology. Egyptian Informatics Journal, 14(3), 221-233.</li>
+                <li>Feng, Y., Wang, K., Liu, X., & Chen, Y. (2019). Water-saving irrigation system based on wireless sensor networks. Journal of Sensors, 2019, 1-15.</li>
+                <li>García, L., Parra, L., Jimenez, J. M., & Lloret, J. (2020). IoT-based smart irrigation systems: An overview on the recent trends on sensors and IoT systems for irrigation in precision agriculture. Sensors, 20(4), 1042.</li>
+                <li>González-Briones, A., Castellanos-Garzón, J. A., & Corchado, J. M. (2018). A review of sustainable intelligent systems for water resources management. Water Resources Management, 32(13), 4145-4163.</li>
+                <li>Groener, B., Knopp, N., Korgan, K., Perry, R., Romero, J., Smith, K., ... & Kruger, A. (2015). Preliminary design of a low-cost greenhouse with open source control systems. Procedia Engineering, 107, 470-479.</li>
+                <li>Hassan, M. M., Khalil, M. I., & Ali, S. (2021). Machine learning approaches in smart agriculture: A review. Sensors, 21(5), 1528.</li>
+                <li>Hillel, D. (1998). Environmental soil physics: Fundamentals, applications, and environmental considerations. Academic Press.</li>
+                <li>Jawad, H. M., Nordin, R., & Gharghan, S. K. (2017). Energy-efficient wireless sensor networks for precision agriculture: A review. Sensors, 17(8), 1781.</li>
+                <li>Kamienski, C., Soininen, J. P., Taumberger, M., Dantas, R., Toscano, A., Salmon Cinotti, T., ... & Torre Neto, A. (2019). Smart water management platform: IoT-based precision irrigation for agriculture. Sensors, 19(2), 276.</li>
+                <li>Keller, J., & Bliesner, R. D. (1990). Sprinkler and trickle irrigation. Van Nostrand Reinhold.</li>
+                <li>Khan, S., Bangash, J. I., & Khan, J. (2019). Impact of modern irrigation technologies on water use efficiency: A review. Environmental Science and Pollution Research, 26(3), 2068-2080.</li>
+                <li>Kumar, A., Kamal, K., Arshad, M. O., & Vadamala, T. (2018). Smart irrigation using low-cost moisture sensors and XBee-based communication. Global Journal of Computer Science and Technology, 18(1), 41-46.</li>
+                <li>Li, D., Zheng, Y., & Zhao, W. (2019). Fault diagnosis system for smart irrigation using artificial neural networks. Neural Computing and Applications, 31(12), 8519-8533.</li>
+                <li>Mahmoud, M. A., Al-Zahrani, M., & Sharif, H. O. (2018). Assessment of artificial neural networks for simulation of soil moisture in arid areas. Water Resources Management, 32(9), 3221-3236.</li>
+                <li>Molden, D., Oweis, T., Pasquale, S., Kijne, J., Hanjra, M. A., & Bindraban, P. (2010). Improving agricultural water productivity: Between optimism and caution. Agricultural Water Management, 97(4), 528-535.</li>
+                <li>Montoya, F. G., Gómez, J., Cama, A., & Zapata-Sierra, A. (2019). A monitoring system for intensive agriculture based on mesh networks and the Android system. Computers and Electronics in Agriculture, 161, 14-20.</li>
+                <li>Navarro-Hellín, H., Torres-Sánchez, R., & Soto-Valles, F. (2020). A decision support system for managing irrigation in agriculture. Computers and Electronics in Agriculture, 124, 121-131.</li>
+                <li>Ojha, T., Misra, S., & Raghuwanshi, N. S. (2017). Sensing and actuation technologies for smart irrigation. IEEE Sensors Journal, 17(23), 7719-7733.</li>
+                <li>Parameswaran, G., & Sivaprasath, K. (2018). Smart drip irrigation system using IoT. International Journal of Engineering & Technology, 7(3.27), 166-169.</li>
+                <li>Perea, R. G., García, I. F., Arroyo, M. M., & Díaz, J. A. R. (2017). Automatic irrigation scheduling using soil moisture sensors and weather forecasting techniques. Agricultural Water Management, 183, 3-14.</li>
+                <li>Pérez-Castro, A., Sánchez-Molina, J. A., & Castilla, M. (2020). cFogStream-IoT: A cloud-fog architecture for automated irrigation in agriculture. Computers and Electronics in Agriculture, 171, 105276.</li>
+                <li>Postel, S. (1999). Pillar of sand: Can the irrigation miracle last? W.W. Norton & Company.</li>
+                <li>Rahman, M. M., Islam, M. T., & Uddin, M. J. (2019). Automatic irrigation system using solar power. International Journal of Advanced Research in Electrical, Electronics and Instrumentation Engineering, 8(2), 338-343.</li>
+                <li>Ramachandran, V., Ramalakshmi, R., & Srinivasan, S. (2018). An automated irrigation system for smart agriculture using the Internet of Things. Procedia Computer Science, 93, 103-110.</li>
+                <li>Rawat, P., Singh, K. D., Chaouchi, H., & Bonnin, J. M. (2014). Wireless sensor networks: A survey on recent developments and potential synergies. The Journal of Supercomputing, 68(1), 1-48.</li>
+                <li>Romero, R., Muriel, J. L., García, I., & Muñoz de la Peña, D. (2017). Research on automatic irrigation control: State of the art and recent results. Agricultural Water Management, 114, 59-66.</li>
+                <li>Sampaio, H., Motlagh, N. H., & Monteiro, P. P. (2020). The future of precision agriculture: Connected intelligently automated irrigation systems. IEEE Internet of Things Magazine, 3(2), 32-37.</li>
+                <li>Singh, P., & Saikia, S. (2019). Arduino-based smart irrigation using water flow sensor, soil moisture sensor, temperature sensor and ESP8266 WiFi module. International Journal of Advanced Research in Computer Science, 10(2), 236-243.</li>
+                <li>Sridharan, K., & Rangarajan, P. (2020). Implementation of IoT based smart farming system with intelligent irrigation control. Journal of Ambient Intelligence and Humanized Computing, 11(4), 1489-1501.</li>
+                <li>Srinivasulu, P., & Babu, M. S. (2018). IoT based smart irrigation system using raspberry pi. International Journal of Pure and Applied Mathematics, 119(12), 1345-1352.</li>
+                <li>Taher, F., Aslam, N., & Phillips, W. (2019). A survey of wireless sensor network applications from a power utility's perspective. Energies, 12(23), 4472.</li>
+                <li>Tao, F., Zhang, M., & Liu, Y. (2019). Digital twin driven smart manufacturing. Academic Press.</li>
+                <li>Uddin, M. A., Mansour, A., & Le Jeune, D. (2018). IoT for intelligent agriculture: Planning, design, and implementation. IEEE Access, 6, 47982-47994.</li>
+                <li>Vani, P. V., & Rao, K. R. (2016). Measurement and monitoring of soil moisture using cloud IoT and Android system. Indian Journal of Science and Technology, 9(31), 1-8.</li>
+                <li>Veihmeyer, F. J., & Hendrickson, A. H. (1927). The moisture equivalent as a measure of the field capacity of soils. Soil Science, 24(2), 157-164.</li>
+                <li>Vij, A., Vijendra, S., & Jain, A. (2020). IoT and machine learning approaches for automation of farm irrigation system: A technical review. Procedia Computer Science, 171, 1139-1147.</li>
+                <li>Wang, N., Zhang, N., & Wang, M. (2017). Precision agriculture—a worldwide overview. Computers and Electronics in Agriculture, 36(2-3), 113-132.</li>
+                <li>Yang, X., Liu, Y., & Deng, K. (2020). Precision irrigation for sustainable agricultural development: Current status and challenges. Agricultural Water Management, 231, 105955.</li>
+                <li>Zhang, D., Zhou, X., & Zhang, J. (2018). A survey of smart irrigation systems: Applications, technologies, and challenges. IEEE Internet of Things Journal, 5(3), 2751-2764.</li>
+                <li>Zhou, B., Wu, D., & Xiang, H. (2021). Digital twin technology in smart agriculture: A comprehensive review. Computers and Electronics in Agriculture, 187, 106303.</li>
+            </ul>
+        </section>
+
+
+
+    </main>
+</body>
+</html>
